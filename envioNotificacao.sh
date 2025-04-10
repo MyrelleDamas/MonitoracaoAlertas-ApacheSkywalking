@@ -10,7 +10,7 @@ const fs = require('fs').promises;
 (async () => {
     const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     const page = await browser.newPage();
-    const url = 'http://10.0.28.209:8081/alerting';
+    const url = 'http://IP_DO_SERVIDOR/alerting';
 
     await page.goto(url, { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(5000);
@@ -38,10 +38,10 @@ EOF
 }
 
 # Endereço de e-mail remetente (sua conta de e-mail corporativo)
-from="myrelle.damas@gmail.com"
+from="coloque seu email@gmail.com"
 
 # Endereço de e-mail destinatário (pode ser o seu e-mail do Gmail)
-to="myrelle.damas@pbh.gov.br"
+to="coloque seu email@gmail.com"
 
 # Assunto do e-mail
 subject="Alarmes extraídos do Skywalking- Script envioNotificacao"
